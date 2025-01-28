@@ -4,7 +4,7 @@ import ProfileImage from "./ProfileImage";
 
 const PortfolioHero = () => {
 	return (
-		<div className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 py-20 h-[calc(100vh-73px)] md:h-auto bg-white">
+		<div className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 py-[100px] h-[calc(100vh-73px)] md:h-auto bg-white">
 			<div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
 				{/* Text Section */}
 				<div className="text-center md:text-left md:max-w-md">
