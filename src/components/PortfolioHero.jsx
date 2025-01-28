@@ -19,10 +19,10 @@ const PortfolioHero = () => {
 						Web Vitals
 					</p>
 					<div className="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
-						<button className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-blue-700 transition">
+						<button className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-blue-700 transition cursor-pointer">
 							Contact Me
 						</button>
-						<button className="border border-gray-300 text-gray-600 px-6 py-2 rounded-full hover:border-gray-400 hover:text-gray-700 transition">
+						<button className="border border-gray-300 text-gray-600 px-6 py-2 rounded-full hover:border-gray-400 hover:text-gray-700 transition cursor-pointer">
 							About Me
 						</button>
 					</div>
