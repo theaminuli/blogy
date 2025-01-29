@@ -1,6 +1,5 @@
 import jsonServer from "json-server";
 import { createServer } from "http";
-import { send } from "micro";
 
 const server = jsonServer.create();
 const router = jsonServer.router("api/db.json");
