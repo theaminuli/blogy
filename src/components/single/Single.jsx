@@ -7,7 +7,7 @@ const Single = () => {
 					<nav className="text-sm text-gray-500">
 						<a href="#" className="hover:underline">
 							CSS FUNCTIONS
-						</a>{" "}
+						</a>
 						|
 						<a href="#" className="hover:underline">
 							RESPONSIVE
@@ -17,10 +17,10 @@ const Single = () => {
 						How to use the Power of CSS Functions
 					</h1>
 					<p className="text-gray-600 mt-2">
-						By{" "}
+						By
 						<a href="#" className="text-blue-600 hover:underline">
 							The Author
-						</a>{" "}
+						</a>
 						| October 3, 2023 | 2 Comments
 					</p>
 				</header>
