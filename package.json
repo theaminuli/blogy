@@ -4,12 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite ",
+	"dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "server": "json-server --watch api/db.json --port 5000",
-    "start": "node server.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server.js",
+    "start": "npm run server & npm run preview"
   },
   "dependencies": {
     "react": "^18.3.1",
