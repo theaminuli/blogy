@@ -1,7 +1,11 @@
+/* eslint-disable react/prop-types */
+import { truncateText } from "../../utils";
 import BlogAuthor from "./BlogAuthor";
 import BlogImage from "./BlogImage";
 
-const BlogPostCard = () => {
+const BlogPostCard = ({ post }) => {
+	console.log(post);
+	
 	return (
 		<div className="mx-auto bg-white rounded-lg shadow-md overflow-hidden">
 			<div className="flex flex-col sm:flex-row">
@@ -17,14 +21,10 @@ const BlogPostCard = () => {
 							href="#"
 							className="hover:underline hover:underline-offset-2 hover:text-blue-500 transition duration-300"
 						>
-							Building microservices with Dropwizard, MongoDB & Docker
+							{post.title?.rendered}
 						</a>
 					</h2>
-					<p className="text-sm text-gray-600 mt-1">
-						This NoSQL database oriented to documents (by documents like JSON)
-						combines some of the features from relational databases, easy to use
-						and the multi-...
-					</p>
+					<div className="text-sm text-gray-600 mt-1" dangerouslySetInnerHTML={{ __html: truncateText(post.excerpt?.rendered, 130) }}></div>
 					{/* Author and Date */}
 					<BlogAuthor />
 				</div>
