@@ -2,25 +2,25 @@
 	"version": 2,
 	"builds": [
 	  {
-		"src": "public/api/db.json",
+		"src": "package.json",
 		"use": "@vercel/static-build",
 		"config": {
-		  "distDir": "public"
+		  "distDir": "dist"
 		}
 	  },
 	  {
-		"src": "package.json",
+		"src": "public/api/db.json",
 		"use": "@vercel/node"
 	  }
 	],
 	"routes": [
 	  {
 		"src": "/api/(.*)",
-		"dest": "/public/api/db.json"
+		"dest": "/api"
 	  },
 	  {
 		"src": "/(.*)",
-		"dest": "/"
+		"dest": "/index.html"
 	  }
 	]
   }
