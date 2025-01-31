@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useFetchPosts } from "../../hooks";
 import { Newsletter, Tags, Topics } from "../sidebar";
 import BlogLoadMore from "./BlogLoadMore";
@@ -18,7 +19,7 @@ const BlogLayout = () => {
 							<BlogPostCard key={index} post={post} />
 						))}
 					</div>
-					<BlogLoadMore loadMoreRef={ loadMoreRef} />
+					<BlogLoadMore loadMoreRef={loadMoreRef} postsHasMore={postsHasMore} postsLoading={ postsLoading} />
 				</div>
 
 				<div className="md:col-span-1">

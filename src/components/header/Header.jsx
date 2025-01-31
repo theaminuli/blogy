@@ -19,8 +19,8 @@ export default function Header() {
 					<a href="#about" className="text-gray-800 hover:text-blue-500">
 						About
 					</a>
-					<a href="#contact" className="text-gray-800 hover:text-blue-500">
-						Contact
+					<a href="#blog" className="text-gray-800 hover:text-blue-500">
+						Blog
 					</a>
 				</div>
 

@@ -12,7 +12,7 @@ const PortfolioHero = () => {
 						Hi, I'm <span className="text-blue-600">Julia Walker.</span>
 					</h1>
 					<h2 className="text-2xl font-semibold text-gray-800 mt-2">
-						Web Developer
+						Best Blogger in the World
 					</h2>
 					<p className="text-gray-600 mt-4">
 						Specialized in <span className="font-medium">a11y</span> and Core

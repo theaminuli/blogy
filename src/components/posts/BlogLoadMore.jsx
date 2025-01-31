@@ -1,7 +1,11 @@
-const BlogLoadMore = ({loadMoreRef}) => {
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+const BlogLoadMore = ({ loadMoreRef, postsHasMore, postsLoading }) => {
 	return (
-		<div className="load-more  text-center mt-12">
-			<button ref={loadMoreRef} className=" bg-blue-500 text-white py-2 px-4 rounded">Load More</button>
+		<div className="load-more  text-center mt-12 flex justify-center">
+			{postsHasMore && (
+				<button ref={loadMoreRef} className="loader"></button>
+			)}
 		</div>
 	);
 };
