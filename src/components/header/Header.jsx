@@ -54,7 +54,7 @@ export default function Header() {
 						className="p-2 text-gray-800 text-[25px] border-r border-gray-300 cursor-pointer dark:text-white dark:border-gray-700"
 						onClick={() => setDarkMode((prev) => !prev)}
 					>
-						{darkMode ? <MdOutlineDarkMode /> :  <RiSunFoggyFill />}
+						{darkMode ? <RiSunFoggyFill /> : <MdOutlineDarkMode />}
 					</button>
 					<button
 						className="p-2 text-gray-800 text-[25px] cursor-pointer dark:text-white"
