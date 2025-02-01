@@ -1,6 +1,6 @@
 # 📸 Blogy
 
-![Hero Image](https://raw.githubusercontent.com/theaminuli/blogy/public/screenshot.png)
+![Hero Image](https://github.com/theaminuli/blogy/blob/main/public/screenshot.png?raw=true)
 
 ## 📝 Project Description
 
