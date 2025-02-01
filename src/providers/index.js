@@ -1,4 +1,11 @@
 import AppProvider from "./AppProvider";
+import ThemeProvider from "./ThemeProvider";
 
-export { AppProvider };
+/**
+ * Exports the AppProvider component.
+ * 
+ * @module providers/index
+ */
+
+export { AppProvider, ThemeProvider };
 

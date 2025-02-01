@@ -1,6 +1,8 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer utilities {
+
 	.loader {
 		@apply w-[13.6px] h-8 bg-blue-600 flex items-center justify-center relative;
 		animation: loading-keys-app-loading 0.8s infinite ease-in-out;
@@ -39,5 +41,14 @@
 
 	.container {
 		@apply mx-auto px-4 max-w-[1170px];
+	}
+	.single-container {
+		@apply mx-auto px-4 max-w-[900px];
+	}
+	.archive-container {
+		@apply mx-auto px-4 max-w-[1000px];
+	}
+	iframe {
+		@apply w-full h-[500px];
 	}
 }

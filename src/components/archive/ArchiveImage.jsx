@@ -3,14 +3,13 @@
 import { useFetchAnyData } from "../../hooks";
 
 /**
- * BlogImage component fetches and displays an image based on the provided mediaID.
- * While the data is loading, it shows a placeholder image.
+ * ArchiveImage component fetches and displays an image based on the provided mediaID.
  * 
  * @param {Object} props - The component props.
  * @param {string} props.mediaID - The ID of the media to fetch.
- * @returns {JSX.Element} The rendered BlogImage component.
+ * @returns {JSX.Element} The rendered component.
  */
-const BlogImage = ({ mediaID }) => {
+const ArchiveImage = ({ mediaID }) => {
 	const { data, loading, error } = useFetchAnyData(`/media/${mediaID}`);
 	if (loading)
 		return (
@@ -30,4 +29,4 @@ const BlogImage = ({ mediaID }) => {
 		</div>
 	);
 };
-export default BlogImage;
+export default ArchiveImage;

@@ -4,15 +4,16 @@ import { useFetchAnyData } from "../../hooks";
 import { formatDate } from "../../utils";
 
 /**
- * BlogAuthor component displays the author's avatar and name along with the post's modified date.
+ * ArchiveAuthor component displays the author's avatar and name along with the post's modified date.
  *
  * @param {Object} props - The component props.
  * @param {Object} props.post - The post object containing author and modified date information.
  * @param {string} props.post.author - The author ID of the post.
  * @param {string} props.post.modified - The modified date of the post.
- * @returns {JSX.Element} The BlogAuthor component.
+ *
+ * @returns {JSX.Element} The rendered ArchiveAuthor component.
  */
-const BlogAuthor = ({ post }) => {
+const ArchiveAuthor = ({ post }) => {
 	const { data, loading, error } = useFetchAnyData(`/users/${post.author}`);
 	const placeholder = "https://placehold.co/32"; // Placeholder for loading state
 
@@ -31,4 +32,4 @@ const BlogAuthor = ({ post }) => {
 	);
 };
 
-export default BlogAuthor;
+export default ArchiveAuthor;

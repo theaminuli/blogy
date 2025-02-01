@@ -28,8 +28,7 @@ const useFetchPosts = (url) => {
 
 			const pageUrl = `${url}?page=${postsPage}&per_page=10`;
 			const response = await axiosInstance.get(pageUrl);
-
-			// Update the posts list with new data
+			
 			dispatch({
 				type: 'POSTS_LIST',
 				payload: [...postsList, ...response.data]
@@ -42,7 +41,6 @@ const useFetchPosts = (url) => {
 					payload: false
 				});
 			} else {
-				// Increment the page number
 				dispatch({
 					type: 'POSTS_PAGE',
 					payload: postsPage + 1
@@ -63,14 +61,14 @@ const useFetchPosts = (url) => {
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
-				if (entries[0].isIntersecting && postsHasMore && !postsLoading) {
+				const loaderItem = entries[0];
+				if (loaderItem.isIntersecting && postsHasMore) {
 					fetchData();
 				}
-			},
-			{ rootMargin: '100px' }
+			}
 		);
 
-		if (loadMoreRef.current) {
+		if (observer && loadMoreRef.current) {
 			observer.observe(loadMoreRef.current);
 		}
 
@@ -78,15 +76,11 @@ const useFetchPosts = (url) => {
 			if (loadMoreRef.current) {
 				observer.unobserve(loadMoreRef.current);
 			}
+			// this important to avoid memory leak
+			if (observer) observer.disconnect();
 		};
-	}, [postsHasMore, postsLoading, fetchData]);
 
-	// Initial fetch
-	useEffect(() => {
-		if (url && postsList.length === 0) {
-			fetchData();
-		}
-	}, [url]);
+	}, [postsHasMore, postsPage]);
 
 	return {
 		postsList,
