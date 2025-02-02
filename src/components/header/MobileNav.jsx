@@ -20,7 +20,7 @@ export default function MobileNav({ isOpen, toggleNav }) {
 				<button
 					onClick={toggleNav}
 					aria-label="Close menu"
-					className="text-white text-2xl hover:text-gray-300 dark:hover:text-gray-400 transition"
+					className="text-white text-2xl hover:text-gray-300 dark:hover:text-gray-400 transition cursor-pointer"
 				>
 					<IoMdClose />
 				</button>

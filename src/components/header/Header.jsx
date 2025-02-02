@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { RiSunFoggyFill } from "react-icons/ri";
@@ -20,6 +20,19 @@ import MobileNav from "./MobileNav";
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 	const { darkMode, setDarkMode } = useContext(ThemeContext);
+	useEffect(() => {
+		const savedDarkMode = localStorage.getItem("darkMode") === "true";
+		setDarkMode(savedDarkMode);
+	}, [setDarkMode]);
+
+	const handleDarkMode = () => {
+		setDarkMode((prev) => {
+			const newMode = !prev;
+			localStorage.setItem("darkMode", newMode);
+			return newMode;
+		});
+	};
+
 	return (
 		<header className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 border-b border-gray-300 dark:border-gray-700 sticky top-0 left-0 z-20">
 			<div className="container mx-auto flex items-center justify-between">
@@ -52,9 +65,9 @@ export default function Header() {
 				<div className="flex items-center">
 					<button
 						className="p-2 text-gray-800 text-[25px] border-r border-gray-300 cursor-pointer dark:text-white dark:border-gray-700"
-						onClick={() => setDarkMode((prev) => !prev)}
+						onClick={handleDarkMode}
 					>
-						{darkMode ? <RiSunFoggyFill /> : <MdOutlineDarkMode />}
+						{darkMode ? <MdOutlineDarkMode /> : <RiSunFoggyFill />}
 					</button>
 					<button
 						className="p-2 text-gray-800 text-[25px] cursor-pointer dark:text-white"
